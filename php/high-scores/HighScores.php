@@ -37,8 +37,10 @@ class HighScores
 
         $this->scores = $scores;
         $this->latest = end($scores);
+        $this->personalBest = max($scores);
+
         rsort($scores);
-        $this->personalBest = $scores[0];
+
         $this->personalTopThree = array_slice($scores, 0, 3);
     }
 
