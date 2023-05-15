@@ -32,9 +32,5 @@ const  TRANSCRIPTIONS = [
 ];
 function toRna(string $dna): string
 {
-    $transcript = '';
-    foreach (str_split($dna) as $char) {
-        $transcript .= TRANSCRIPTIONS[$char];
-    }
-    return $transcript;
+    return strtr($dna, TRANSCRIPTIONS);
 }
